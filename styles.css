@@ -1,1 +1,32 @@
 /*  your css code here. If applicable */
+body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+	margin:0;
+}
+.code-container{
+	
+	text-align:center;
+	border:1px solid;
+	border-radius:10px;
+	width:800px;
+    height:500px;
+}
+.code{
+	
+	justify-content:center;
+	border:1px solid #ccc;
+	width:100px;
+	height:100px;
+	margin:5px;
+	outline:none;
+	border-radius:5px;
+	transition:border-color 0.3s;
+	font-size:1.5em;
+	text-align:center;
+}
+.code:focus{
+	border-color:grey;
+}
