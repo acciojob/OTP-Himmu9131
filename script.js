@@ -10,14 +10,15 @@ inputCode.forEach((input,index)=>{
 	input.addEventListener("keydown",(e)=>{
 		 if (e.key === "Backspace") {
       // Always focus on the previous input and clear it
-       if (index > 0) {
+       
 		   inputCode[index].value = "";
-        inputCode[index - 1].focus(); // Move focus to the previous input
+        // Move focus to the previous input
          // Clear the previous input
-      } else {
-		   inputCode[index].value = "";
-        e.target.value = ""; // Clear the current input if it's the first one
-      }}
+      if(index>0) {
+		    inputCode[index - 1].focus();
+		   }
+		 e.preventDefault();
+		 }
 
 	});
 });
